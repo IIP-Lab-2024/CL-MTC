@@ -1,4 +1,4 @@
-# CL-MTC
+## CL-MTC
 
 This repository contains the code at [An Effective Deployment of Contrastive Learning in Multi-label Text Classification](https://aclanthology.org/2023.findings-acl.556/). 
 
@@ -11,6 +11,9 @@ The effectiveness of contrastive learning technology in natural language process
 ## Train
 
     python scripts/train.py --train-path data/E-c-In-train.txt --dev-path data/E-c-In-dev.txt --loss-type SCL --seed 1111 --lang Indonesian --alpha-loss 0.00008 --temperature 1.9
+
+## Test
+    python scripts/test.py --test-path data/E-c-In-test.txt --model-path 1111_checkpoint.pt --lang Indonesian
 
 ## Search
 
@@ -38,5 +41,5 @@ If you find this repo helpful, please cite the following paper:
     doi = "10.18653/v1/2023.findings-acl.556",
     pages = "8730--8744",
     abstract = "The effectiveness of contrastive learning technology in natural language processing tasks is yet to be explored and analyzed. How to construct positive and negative samples correctly and reasonably is the core challenge of contrastive learning. It is even harder to discover contrastive objects in multi-label text classification tasks. There are very few contrastive losses proposed previously. In this paper, we investigate the problem from a different angle by proposing five novel contrastive losses for multi-label text classification tasks. These are Strict Contrastive Loss (SCL), Intra-label Contrastive Loss (ICL), Jaccard Similarity Contrastive Loss (JSCL), Jaccard Similarity Probability Contrastive Loss (JSPCL), and Stepwise Label Contrastive Loss (SLCL). We explore the effectiveness of contrastive learning for multi-label text classification tasks by the employment of these novel losses and provide a set of baseline models for deploying contrastive learning techniques on specific tasks. We further perform an interpretable analysis of our approach to show how different components of contrastive learning losses play their roles. The experimental results show that our proposed contrastive losses can bring improvement to multi-label text classification tasks. Our work also explores how contrastive learning should be adapted for multi-label text classification tasks.",
-}
+    }
 
